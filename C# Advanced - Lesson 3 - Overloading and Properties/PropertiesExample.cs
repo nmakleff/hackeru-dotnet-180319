@@ -31,4 +31,18 @@ namespace ClassesEXample
             Month = month;
         }
     }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            PropertiesExample PE = new PropertiesExample(2);
+            PE.Month = 1;
+            Console.WriteLine(PE.Month);  // Will write 1
+            PE.Month = 13;
+            Console.WriteLine(PE.Month);  // Will still write one, because 13 is illegal value and therefore will be ignored
+         }
+    }
 }
