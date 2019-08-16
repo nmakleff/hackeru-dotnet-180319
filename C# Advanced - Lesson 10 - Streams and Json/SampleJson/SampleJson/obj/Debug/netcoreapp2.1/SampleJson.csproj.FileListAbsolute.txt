@@ -1,0 +1,8 @@
+C:\Users\Nir\source\repos\SampleJson\SampleJson\bin\Debug\netcoreapp2.1\SampleJson.deps.json
+C:\Users\Nir\source\repos\SampleJson\SampleJson\bin\Debug\netcoreapp2.1\SampleJson.runtimeconfig.json
+C:\Users\Nir\source\repos\SampleJson\SampleJson\bin\Debug\netcoreapp2.1\SampleJson.runtimeconfig.dev.json
+C:\Users\Nir\source\repos\SampleJson\SampleJson\bin\Debug\netcoreapp2.1\SampleJson.dll
+C:\Users\Nir\source\repos\SampleJson\SampleJson\obj\Debug\netcoreapp2.1\SampleJson.csprojAssemblyReference.cache
+C:\Users\Nir\source\repos\SampleJson\SampleJson\obj\Debug\netcoreapp2.1\SampleJson.csproj.CoreCompileInputs.cache
+C:\Users\Nir\source\repos\SampleJson\SampleJson\obj\Debug\netcoreapp2.1\SampleJson.AssemblyInfoInputs.cache
+C:\Users\Nir\source\repos\SampleJson\SampleJson\obj\Debug\netcoreapp2.1\SampleJson.AssemblyInfo.cs
