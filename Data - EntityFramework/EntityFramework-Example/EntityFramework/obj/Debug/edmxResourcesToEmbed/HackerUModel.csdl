@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HackerUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GenderOption">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="Int32" Nullable="false" />
+    <Property Name="GenderDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_GenderOptions" FromRole="GenderOptions" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="SerialNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PurchaseItems" Relationship="Self.FK_PurchaseItems_Products" FromRole="Products" ToRole="PurchaseItems" />
+  </EntityType>
+  <EntityType Name="PurchaseItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_PurchaseItems_Products" FromRole="PurchaseItems" ToRole="Products" />
+    <NavigationProperty Name="Purchase" Relationship="Self.FK_PurchaseItems_Purchases" FromRole="PurchaseItems" ToRole="Purchases" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalAmount" Type="Double" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="PurchaseItems" Relationship="Self.FK_PurchaseItems_Purchases" FromRole="Purchases" ToRole="PurchaseItems" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="GenderOption" Relationship="Self.FK_Users_GenderOptions" FromRole="Users" ToRole="GenderOptions" />
+  </EntityType>
+  <Association Name="FK_Users_GenderOptions">
+    <End Role="GenderOptions" Type="Self.GenderOption" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GenderOptions">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Gender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseItems_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="PurchaseItems" Type="Self.PurchaseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="PurchaseItems">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseItems_Purchases">
+    <End Role="Purchases" Type="Self.Purchase" Multiplicity="1" />
+    <End Role="PurchaseItems" Type="Self.PurchaseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purchases">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PurchaseItems">
+        <PropertyRef Name="PurchaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HackerUEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GenderOptions" EntityType="Self.GenderOption" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="PurchaseItems" EntityType="Self.PurchaseItem" />
+    <EntitySet Name="Purchases" EntityType="Self.Purchase" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Users_GenderOptions" Association="Self.FK_Users_GenderOptions">
+      <End Role="GenderOptions" EntitySet="GenderOptions" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseItems_Products" Association="Self.FK_PurchaseItems_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="PurchaseItems" EntitySet="PurchaseItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseItems_Purchases" Association="Self.FK_PurchaseItems_Purchases">
+      <End Role="Purchases" EntitySet="Purchases" />
+      <End Role="PurchaseItems" EntitySet="PurchaseItems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.exe.config
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.exe
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.pdb
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\obj\Debug\EntityFramework.csprojAssemblyReference.cache
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\obj\Debug\EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\obj\Debug\EntityFramework.csproj.CopyComplete
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\obj\Debug\EntityFramework.exe
+C:\Users\HackerU\source\repos\EntityFramework\EntityFramework\obj\Debug\EntityFramework.pdb

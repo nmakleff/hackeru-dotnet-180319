@@ -1,0 +1,6 @@
+C:\Users\HackerU\source\repos\DatasetExample\DatasetExample\bin\Debug\DatasetExample.exe.config
+C:\Users\HackerU\source\repos\DatasetExample\DatasetExample\bin\Debug\DatasetExample.exe
+C:\Users\HackerU\source\repos\DatasetExample\DatasetExample\bin\Debug\DatasetExample.pdb
+C:\Users\HackerU\source\repos\DatasetExample\DatasetExample\obj\Debug\DatasetExample.csproj.CoreCompileInputs.cache
+C:\Users\HackerU\source\repos\DatasetExample\DatasetExample\obj\Debug\DatasetExample.exe
+C:\Users\HackerU\source\repos\DatasetExample\DatasetExample\obj\Debug\DatasetExample.pdb

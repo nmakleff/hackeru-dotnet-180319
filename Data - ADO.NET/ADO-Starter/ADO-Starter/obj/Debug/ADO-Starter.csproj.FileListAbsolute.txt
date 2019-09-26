@@ -1,0 +1,7 @@
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\bin\Debug\ADO-Starter.exe.config
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\bin\Debug\ADO-Starter.exe
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\bin\Debug\ADO-Starter.pdb
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\obj\Debug\ADO-Starter.csprojAssemblyReference.cache
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\obj\Debug\ADO-Starter.csproj.CoreCompileInputs.cache
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\obj\Debug\ADO-Starter.exe
+C:\Users\HackerU\source\repos\ADO-Starter\ADO-Starter\obj\Debug\ADO-Starter.pdb

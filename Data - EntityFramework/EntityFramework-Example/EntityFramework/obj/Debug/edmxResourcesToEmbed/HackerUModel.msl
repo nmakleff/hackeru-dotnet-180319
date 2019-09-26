@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HackerUModelStoreContainer" CdmEntityContainer="HackerUEntities">
+    <EntitySetMapping Name="GenderOptions">
+      <EntityTypeMapping TypeName="HackerUModel.GenderOption">
+        <MappingFragment StoreEntitySet="GenderOptions">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="GenderDesc" ColumnName="GenderDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="HackerUModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseItems">
+      <EntityTypeMapping TypeName="HackerUModel.PurchaseItem">
+        <MappingFragment StoreEntitySet="PurchaseItems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Purchases">
+      <EntityTypeMapping TypeName="HackerUModel.Purchase">
+        <MappingFragment StoreEntitySet="Purchases">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="HackerUModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
