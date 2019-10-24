@@ -11,6 +11,14 @@ namespace XO
         private string[,] _board;
         private bool _turn;
 
+        public string[,] Board
+        {
+            get
+            {
+                return _board;
+            }
+        }
+
         public XO()
         {
             _board = new string[3, 3];
@@ -19,31 +27,6 @@ namespace XO
                     _board[i, j] = " ";
 
             _turn = false;
-        }
-
-        public void PaintBoard()
-        {
-            Console.Clear();
-            Console.WriteLine("-------------");
-            Console.WriteLine("| {0} | {1} | {2} |", _board[0, 0], _board[1, 0], _board[2, 0]);
-            Console.WriteLine("-------------");
-            Console.WriteLine("| {0} | {1} | {2} |", _board[0, 1], _board[1, 1], _board[2, 1]);
-            Console.WriteLine("-------------");
-            Console.WriteLine("| {0} | {1} | {2} |", _board[0, 2], _board[1, 2], _board[2, 2]);
-            Console.WriteLine("-------------");
-            Console.WriteLine();
-
-            Console.WriteLine("Where do you want to place your X/O?");
-            Console.WriteLine();
-
-            Console.WriteLine("-------------");
-            Console.WriteLine("| 1 | 2 | 3 |");
-            Console.WriteLine("-------------");
-            Console.WriteLine("| 4 | 5 | 6 |");
-            Console.WriteLine("-------------");
-            Console.WriteLine("| 7 | 8 | 9 |");
-            Console.WriteLine("-------------");
-            Console.WriteLine();
         }
 
         public bool SetPlayerState(int position)
@@ -131,7 +114,7 @@ namespace XO
             // Check 0,2 to 0,2
             ifThereIsAWinnder = true;
             for (int x = 1; x < 3; x++)
-                if (_board[x, 2-x] != _board[x - 1, x + 1] || _board[x, 2 - x] == " ")
+                //if (_board[x, 2-x] != _board[x - 1, 2 - x + 1] || _board[x, 2 - x] == " ")
                 {
                     ifThereIsAWinnder = false;
                     break;
